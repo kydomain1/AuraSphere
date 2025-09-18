@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Category - AuraSphere</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <svg class="logo-svg" viewBox="0 0 200 32" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#333333;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="16" cy="16" r="14" fill="none" stroke="url(#logoGradient)" stroke-width="1" opacity="0.6"/>
+                            <circle cx="16" cy="16" r="9" fill="none" stroke="url(#logoGradient)" stroke-width="1.5"/>
+                            <circle cx="16" cy="16" r="4" fill="url(#logoGradient)"/>
+                            <text x="40" y="21" font-family="Inter, sans-serif" font-size="20" font-weight="400" fill="#000000">AuraSphere</text>
+                        </svg>
+                    </a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link active">Categories <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="category.html?cat=fashion" class="dropdown-link">Fashion & Accessories</a>
+                                <a href="category.html?cat=health" class="dropdown-link">Health & Beauty</a>
+                                <a href="category.html?cat=home" class="dropdown-link">Home & Garden</a>
+                                <a href="category.html?cat=travel" class="dropdown-link">Travel & Accommodation</a>
+                                <a href="category.html?cat=finance" class="dropdown-link">Finance & Insurance</a>
+                                <a href="category.html?cat=food" class="dropdown-link">Food & Beverage</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-search">
+                    <input type="text" class="search-input" placeholder="Search articles...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="category-hero">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span id="category-breadcrumb">Categories</span>
+                </div>
+                <div class="hero-content">
+                    <div class="category-icon" id="category-icon">
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <h1 class="category-title" id="category-title">All Categories</h1>
+                    <p class="category-description" id="category-description">Explore our comprehensive collection of lifestyle articles and recommendations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-content">
+            <div class="container">
+                <div class="content-header">
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-filter="all">All Articles</button>
+                        <button class="filter-btn" data-filter="fashion">Fashion & Accessories</button>
+                        <button class="filter-btn" data-filter="health">Health & Beauty</button>
+                        <button class="filter-btn" data-filter="home">Home & Garden</button>
+                        <button class="filter-btn" data-filter="travel">Travel & Accommodation</button>
+                        <button class="filter-btn" data-filter="finance">Finance & Insurance</button>
+                        <button class="filter-btn" data-filter="food">Food & Beverage</button>
+                    </div>
+                    <div class="sort-options">
+                        <select id="sort-select" class="sort-select">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="articles-grid" id="articles-grid">
+                    <!-- Fashion Articles -->
+                    <article class="article-card" data-category="fashion" data-date="2025-03-15">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=400&q=80" alt="Sustainable Fashion Trends">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Fashion & Accessories</span>
+                                <span class="article-date">March 15, 2025</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="article-1.html">The Rise of Sustainable Fashion: Top 10 Eco-Friendly Brands to Watch</a>
+                            </h3>
+                            <p class="article-excerpt">Discover the latest sustainable fashion trends and the brands leading the eco-conscious revolution in style and manufacturing.</p>
+                            <a href="article-1.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Health Articles -->
+                    <article class="article-card" data-category="health" data-date="2025-04-02">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1571513722275-4b41940f54b8?auto=format&fit=crop&w=400&q=80" alt="Morning Skincare Routine">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Health & Beauty</span>
+                                <span class="article-date">April 2, 2025</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="article-2.html">The Perfect Morning Skincare Routine: 7 Steps for Glowing Skin</a>
+                            </h3>
+                            <p class="article-excerpt">Transform your morning routine with these scientifically-backed skincare steps and product recommendations for radiant skin.</p>
+                            <a href="article-2.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Home Articles -->
+                    <article class="article-card" data-category="home" data-date="2025-05-18">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=80" alt="Minimalist Home Design">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Home & Garden</span>
+                                <span class="article-date">May 18, 2025</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="article-3.html">Creating a Minimalist Home: Essential Furniture and Decor Pieces</a>
+                            </h3>
+                            <p class="article-excerpt">Learn how to transform your space with carefully curated minimalist furniture and accessories for a serene living environment.</p>
+                            <a href="article-3.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Travel Articles -->
+                    <article class="article-card" data-category="travel" data-date="2025-06-10">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=400&q=80" alt="European Travel Destinations">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Travel & Accommodation</span>
+                                <span class="article-date">June 10, 2025</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="article-4.html">Hidden Gems of Europe: 12 Underrated Destinations for 2025</a>
+                            </h3>
+                            <p class="article-excerpt">Explore Europe's best-kept secrets with our guide to stunning lesser-known destinations that offer authentic experiences.</p>
+                            <a href="article-4.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Food Articles -->
+                    <article class="article-card" data-category="food" data-date="2025-08-22">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=400&q=80" alt="Coffee Culture Trends">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Food & Beverage</span>
+                                <span class="article-date">August 22, 2025</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="article-5.html">The Evolution of Coffee Culture: From Bean to Cup Excellence</a>
+                            </h3>
+                            <p class="article-excerpt">Dive into the world of specialty coffee and discover the tools and techniques for the perfect brew at home.</p>
+                            <a href="article-5.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Additional sample articles for demonstration -->
+                    <article class="article-card" data-category="finance" data-date="2025-01-20">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=400&q=80" alt="Investment Planning">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Finance & Insurance</span>
+                                <span class="article-date">January 20, 2025</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="article-4.html">Hidden Gems of Europe: 12 Underrated Destinations for 2025</a>
+                            </h3>
+                            <p class="article-excerpt">Learn the fundamentals of smart investing with expert tips on building a diversified portfolio for long-term financial success.</p>
+                            <a href="article-4.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination" id="pagination">
+                    <!-- Pagination will be generated by JavaScript -->
+                </div>
+
+                <div class="no-results" id="no-results" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No articles found</h3>
+                        <p>Try adjusting your filters or browse all categories.</p>
+                        <button class="filter-btn" data-filter="all">Show All Articles</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <svg class="logo-svg" viewBox="0 0 200 32" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#cccccc;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="16" cy="16" r="14" fill="none" stroke="url(#footerLogoGradient)" stroke-width="1" opacity="0.6"/>
+                            <circle cx="16" cy="16" r="9" fill="none" stroke="url(#footerLogoGradient)" stroke-width="1.5"/>
+                            <circle cx="16" cy="16" r="4" fill="url(#footerLogoGradient)"/>
+                            <text x="40" y="21" font-family="Inter, sans-serif" font-size="20" font-weight="400" fill="#ffffff">AuraSphere</text>
+                        </svg>
+                    </div>
+                    <p class="footer-desc">Your guide to lifestyle excellence across fashion, health, home, travel, finance, and culinary experiences.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/aurasphere" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/aurasphere" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/aurasphere" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com/aurasphere" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="category.html?cat=fashion">Fashion & Accessories</a></li>
+                        <li><a href="category.html?cat=health">Health & Beauty</a></li>
+                        <li><a href="category.html?cat=home">Home & Garden</a></li>
+                        <li><a href="category.html?cat=travel">Travel & Accommodation</a></li>
+                        <li><a href="category.html?cat=finance">Finance & Insurance</a></li>
+                        <li><a href="category.html?cat=food">Food & Beverage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AuraSphere. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/category.js"></script>
+</body>
+</html>

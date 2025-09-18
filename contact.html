@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact AuraSphere - Get in Touch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <svg class="logo-svg" viewBox="0 0 200 32" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#333333;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="16" cy="16" r="14" fill="none" stroke="url(#logoGradient)" stroke-width="1" opacity="0.6"/>
+                            <circle cx="16" cy="16" r="9" fill="none" stroke="url(#logoGradient)" stroke-width="1.5"/>
+                            <circle cx="16" cy="16" r="4" fill="url(#logoGradient)"/>
+                            <text x="40" y="21" font-family="Inter, sans-serif" font-size="20" font-weight="400" fill="#000000">AuraSphere</text>
+                        </svg>
+                    </a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Categories <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="category.html?cat=fashion" class="dropdown-link">Fashion & Accessories</a>
+                                <a href="category.html?cat=health" class="dropdown-link">Health & Beauty</a>
+                                <a href="category.html?cat=home" class="dropdown-link">Home & Garden</a>
+                                <a href="category.html?cat=travel" class="dropdown-link">Travel & Accommodation</a>
+                                <a href="category.html?cat=finance" class="dropdown-link">Finance & Insurance</a>
+                                <a href="category.html?cat=food" class="dropdown-link">Food & Beverage</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-search">
+                    <input type="text" class="search-input" placeholder="Search articles...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="page-title">Get in Touch</h1>
+                    <p class="page-subtitle">We'd love to hear from you. Reach out with questions, suggestions, or collaboration ideas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h2>Send us a Message</h2>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Choose a topic</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="product-suggestion">Product Suggestion</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="press">Press Inquiry</option>
+                                    <option value="technical">Technical Support</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell us what's on your mind..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3>Other Ways to Reach Us</h3>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Email</h4>
+                                <p>hello@aurasphere.com</p>
+                                <small>We typically respond within 24 hours</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Response Time</h4>
+                                <p>24-48 hours</p>
+                                <small>Monday through Friday</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Location</h4>
+                                <p>Based in New York</p>
+                                <small>Serving readers worldwide</small>
+                            </div>
+                        </div>
+
+                        <div class="social-contact">
+                            <h4>Follow Us</h4>
+                            <div class="social-links-contact">
+                                <a href="https://instagram.com/aurasphere" class="social-link-contact">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>@aurasphere</span>
+                                </a>
+                                <a href="https://pinterest.com/aurasphere" class="social-link-contact">
+                                    <i class="fab fa-pinterest"></i>
+                                    <span>AuraSphere</span>
+                                </a>
+                                <a href="https://facebook.com/aurasphere" class="social-link-contact">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>AuraSphere Blog</span>
+                                </a>
+                                <a href="https://twitter.com/aurasphere" class="social-link-contact">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>@aurasphere</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>Do you accept guest posts?</h4>
+                        <p>We occasionally accept high-quality guest contributions from industry experts. Please reach out with your proposal and writing samples.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How do you choose products to review?</h4>
+                        <p>We select products based on reader interest, innovation, sustainability, and alignment with our editorial standards. We purchase all items for testing.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can brands collaborate with AuraSphere?</h4>
+                        <p>We're open to authentic partnerships with brands that share our values. All collaborations are clearly disclosed and maintain editorial independence.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How often do you publish new content?</h4>
+                        <p>We publish 3-4 high-quality articles per week, covering various lifestyle categories. Subscribe to our newsletter for updates.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you offer product recommendations?</h4>
+                        <p>Yes! Our team provides personalized recommendations. Reach out with your specific needs and budget, and we'll help guide your choices.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How can I suggest a topic or product?</h4>
+                        <p>We love hearing from readers! Use the contact form above with "Product Suggestion" as the subject, or reach out via social media.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-signup">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Stay in the Loop</h2>
+                        <p>Get our latest articles, exclusive guides, and curated recommendations delivered to your inbox weekly.</p>
+                        <ul class="newsletter-benefits">
+                            <li><i class="fas fa-check"></i> Weekly lifestyle insights</li>
+                            <li><i class="fas fa-check"></i> Exclusive product recommendations</li>
+                            <li><i class="fas fa-check"></i> Early access to guides</li>
+                            <li><i class="fas fa-check"></i> No spam, unsubscribe anytime</li>
+                        </ul>
+                    </div>
+                    <div class="newsletter-form">
+                        <form class="newsletter-signup-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter your email address" required>
+                                <button type="submit">Subscribe</button>
+                            </div>
+                            <p class="privacy-note">We respect your privacy. No spam, ever.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <svg class="logo-svg" viewBox="0 0 200 32" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#cccccc;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="16" cy="16" r="14" fill="none" stroke="url(#footerLogoGradient)" stroke-width="1" opacity="0.6"/>
+                            <circle cx="16" cy="16" r="9" fill="none" stroke="url(#footerLogoGradient)" stroke-width="1.5"/>
+                            <circle cx="16" cy="16" r="4" fill="url(#footerLogoGradient)"/>
+                            <text x="40" y="21" font-family="Inter, sans-serif" font-size="20" font-weight="400" fill="#ffffff">AuraSphere</text>
+                        </svg>
+                    </div>
+                    <p class="footer-desc">Your guide to lifestyle excellence across fashion, health, home, travel, finance, and culinary experiences.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/aurasphere" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/aurasphere" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/aurasphere" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com/aurasphere" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="category.html?cat=fashion">Fashion & Accessories</a></li>
+                        <li><a href="category.html?cat=health">Health & Beauty</a></li>
+                        <li><a href="category.html?cat=home">Home & Garden</a></li>
+                        <li><a href="category.html?cat=travel">Travel & Accommodation</a></li>
+                        <li><a href="category.html?cat=finance">Finance & Insurance</a></li>
+                        <li><a href="category.html?cat=food">Food & Beverage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AuraSphere. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Simple form validation
+            if (validateForm(this)) {
+                // Show success message
+                const submitBtn = this.querySelector('.submit-btn');
+                const originalText = submitBtn.innerHTML;
+
+                submitBtn.innerHTML = '<span class="btn-text">Message Sent!</span><i class="fas fa-check"></i>';
+                submitBtn.style.background = '#28a745';
+
+                // Reset form after 3 seconds
+                setTimeout(() => {
+                    this.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                }, 3000);
+            }
+        });
+
+        // Newsletter form handling
+        document.querySelector('.newsletter-signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const email = this.querySelector('input[type="email"]').value;
+            if (email) {
+                const submitBtn = this.querySelector('button');
+                const originalText = submitBtn.textContent;
+
+                submitBtn.textContent = 'Subscribed!';
+                submitBtn.style.background = '#28a745';
+
+                setTimeout(() => {
+                    this.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = '';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
