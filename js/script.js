@@ -2,24 +2,83 @@
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 
+// Create overlay element
+let navOverlay = null;
+
 if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        navToggle.classList.toggle('active');
+    // Create overlay
+    navOverlay = document.createElement('div');
+    navOverlay.className = 'nav-overlay';
+    document.body.appendChild(navOverlay);
+
+    function toggleMobileMenu() {
+        const isActive = navMenu.classList.contains('active');
+        
+        if (isActive) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
+
+    function openMobileMenu() {
+        navMenu.classList.add('active');
+        navToggle.classList.add('active');
+        navOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
 
         // Animate bars
         const bars = navToggle.querySelectorAll('.bar');
         bars.forEach((bar, index) => {
-            if (navToggle.classList.contains('active')) {
-                if (index === 0) bar.style.transform = 'rotate(45deg) translate(5px, 5px)';
-                if (index === 1) bar.style.opacity = '0';
-                if (index === 2) bar.style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                bar.style.transform = 'none';
-                bar.style.opacity = '1';
-            }
+            if (index === 0) bar.style.transform = 'rotate(45deg) translate(5px, 5px)';
+            if (index === 1) bar.style.opacity = '0';
+            if (index === 2) bar.style.transform = 'rotate(-45deg) translate(7px, -6px)';
         });
+    }
+
+    function closeMobileMenu() {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        navOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+
+        // Reset bars
+        const bars = navToggle.querySelectorAll('.bar');
+        bars.forEach((bar) => {
+            bar.style.transform = 'none';
+            bar.style.opacity = '1';
+        });
+    }
+
+    // Toggle menu on button click
+    navToggle.addEventListener('click', toggleMobileMenu);
+
+    // Close menu when clicking overlay
+    navOverlay.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking on nav links
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
     });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+
+    // Handle mobile dropdown menu
+    const dropdownToggle = navMenu.querySelector('.dropdown > .nav-link');
+    const dropdownMenu = navMenu.querySelector('.dropdown-menu');
+    
+    if (dropdownToggle && dropdownMenu) {
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdownMenu.classList.toggle('active');
+        });
+    }
 }
 
 // Search Functionality
@@ -337,17 +396,23 @@ function createSocialWidget() {
     const socialWidget = document.createElement('div');
     socialWidget.classList.add('social-widget');
     socialWidget.innerHTML = `
-        <a href="#" class="social-link facebook" title="Follow on Facebook">
+        <a href="https://www.facebook.com/AuraSphereLifestyle" class="social-link facebook" title="Follow on Facebook" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="#" class="social-link twitter" title="Follow on Twitter">
+        <a href="https://twitter.com/AuraSphereBlog" class="social-link twitter" title="Follow on Twitter" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-twitter"></i>
         </a>
-        <a href="#" class="social-link instagram" title="Follow on Instagram">
+        <a href="https://www.instagram.com/aurasphere_lifestyle" class="social-link instagram" title="Follow on Instagram" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="#" class="social-link pinterest" title="Follow on Pinterest">
+        <a href="https://www.pinterest.com/auraspherelifestyle" class="social-link pinterest" title="Follow on Pinterest" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-pinterest-p"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/aurasphere-lifestyle" class="social-link linkedin" title="Connect on LinkedIn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com/@AuraSphereLifestyle" class="social-link youtube" title="Subscribe on YouTube" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube"></i>
         </a>
     `;
     document.body.appendChild(socialWidget);
@@ -371,7 +436,15 @@ function enhanceSearch() {
         'coffee culture',
         'investment tips',
         'eco-friendly',
-        'wellness'
+        'wellness',
+        'interior design',
+        'healthy living',
+        'fashion trends',
+        'beauty tips',
+        'home decor',
+        'travel guides',
+        'financial advice',
+        'cooking recipes'
     ];
 
     let suggestionBox = null;
@@ -405,7 +478,9 @@ function enhanceSearch() {
             const filtered = suggestions.filter(s => s.includes(value));
             if (filtered.length > 0) {
                 suggestionBox.innerHTML = filtered.map(s =>
-                    `<div style="padding: 0.5rem; cursor: pointer; border-bottom: 1px solid #eee;"
+                    `<div style="padding: 0.75rem 1rem; cursor: pointer; border-bottom: 1px solid #eee; transition: all 0.2s ease;"
+                         onmouseover="this.style.background='var(--light-bg)'; this.style.color='var(--primary-color)'"
+                         onmouseout="this.style.background='white'; this.style.color='var(--text-color)'"
                          onclick="selectSuggestion('${s}')">${s}</div>`
                 ).join('');
                 suggestionBox.style.display = 'block';
@@ -420,6 +495,49 @@ function enhanceSearch() {
     document.addEventListener('click', (e) => {
         if (!searchInput.contains(e.target) && suggestionBox) {
             suggestionBox.style.display = 'none';
+        }
+    });
+
+    // Add keyboard navigation
+    searchInput.addEventListener('keydown', (e) => {
+        if (suggestionBox && suggestionBox.style.display === 'block') {
+            const suggestions = suggestionBox.querySelectorAll('div');
+            let currentIndex = -1;
+            
+            suggestions.forEach((suggestion, index) => {
+                if (suggestion.style.background === 'var(--light-bg)') {
+                    currentIndex = index;
+                }
+            });
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                currentIndex = Math.min(currentIndex + 1, suggestions.length - 1);
+                suggestions.forEach(s => {
+                    s.style.background = 'white';
+                    s.style.color = 'var(--text-color)';
+                });
+                if (suggestions[currentIndex]) {
+                    suggestions[currentIndex].style.background = 'var(--light-bg)';
+                    suggestions[currentIndex].style.color = 'var(--primary-color)';
+                }
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                currentIndex = Math.max(currentIndex - 1, 0);
+                suggestions.forEach(s => {
+                    s.style.background = 'white';
+                    s.style.color = 'var(--text-color)';
+                });
+                if (suggestions[currentIndex]) {
+                    suggestions[currentIndex].style.background = 'var(--light-bg)';
+                    suggestions[currentIndex].style.color = 'var(--primary-color)';
+                }
+            } else if (e.key === 'Enter' && currentIndex >= 0) {
+                e.preventDefault();
+                suggestions[currentIndex].click();
+            } else if (e.key === 'Escape') {
+                suggestionBox.style.display = 'none';
+            }
         }
     });
 }

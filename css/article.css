@@ -105,10 +105,38 @@
     color: var(--text-color);
 }
 
+.article-content a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.article-content a:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.article-content a:visited {
+    color: var(--primary-color);
+}
+
 .article-content ul,
 .article-content ol {
     margin: 1.5rem 0;
     padding-left: 2rem;
+}
+
+.article-content li a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.article-content li a:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 
 .article-content li {

@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - AuraSphere</title>
+    <title>Search Results - AuraSphere</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/page.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-content">
-                <div class="nav-left">
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-brand">
                     <a href="index.html" class="logo">
-                        <svg width="150" height="32" viewBox="0 0 150 32">
+                        <svg class="logo-svg" viewBox="0 0 200 32" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                    <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#333333;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
                                 </linearGradient>
                             </defs>
                             <circle cx="16" cy="16" r="14" fill="none" stroke="url(#logoGradient)" stroke-width="1" opacity="0.6"/>
@@ -29,8 +30,8 @@
                         </svg>
                     </a>
                 </div>
-                <div class="nav-center">
-                    <ul class="nav-menu">
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
                         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link">Categories <i class="fas fa-chevron-down"></i></a>
@@ -47,114 +48,90 @@
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </nav>
-
-    <main class="main-content">
-        <div class="container">
-            <div class="page-header">
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <span>Privacy Policy</span>
+                <div class="nav-search">
+                    <input type="text" class="search-input" placeholder="Search articles..." id="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
                 </div>
-                <h1 class="page-title">Privacy Policy</h1>
-                <p class="page-subtitle">How we collect, use, and protect your information</p>
-            </div>
-
-            <div class="page-content">
-                <div class="content-wrapper">
-                    <p class="lead">At AuraSphere, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website.</p>
-
-                    <h2>Information We Collect</h2>
-                    <h3>Personal Information</h3>
-                    <p>We may collect personal information that you voluntarily provide to us, including:</p>
-                    <ul>
-                        <li>Name and email address when you subscribe to our newsletter</li>
-                        <li>Contact information when you reach out through our contact form</li>
-                        <li>Comments and feedback you provide on our articles</li>
-                    </ul>
-
-                    <h3>Automatically Collected Information</h3>
-                    <p>When you visit our website, we automatically collect certain information, including:</p>
-                    <ul>
-                        <li>Browser type and version</li>
-                        <li>Operating system</li>
-                        <li>IP address</li>
-                        <li>Pages visited and time spent on our site</li>
-                        <li>Referring website information</li>
-                    </ul>
-
-                    <h2>How We Use Your Information</h2>
-                    <p>We use the collected information for the following purposes:</p>
-                    <ul>
-                        <li>To provide and improve our content and services</li>
-                        <li>To send newsletters and updates (with your consent)</li>
-                        <li>To respond to your inquiries and comments</li>
-                        <li>To analyze website usage and improve user experience</li>
-                        <li>To ensure website security and prevent fraud</li>
-                    </ul>
-
-                    <h2>Information Sharing</h2>
-                    <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
-                    <ul>
-                        <li>With your explicit consent</li>
-                        <li>To comply with legal obligations</li>
-                        <li>To protect our rights and safety</li>
-                        <li>With trusted service providers who assist in website operations</li>
-                    </ul>
-
-                    <h2>Cookies and Tracking Technologies</h2>
-                    <p>We use cookies and similar technologies to enhance your browsing experience. Cookies help us:</p>
-                    <ul>
-                        <li>Remember your preferences</li>
-                        <li>Analyze website traffic</li>
-                        <li>Improve website functionality</li>
-                    </ul>
-                    <p>You can control cookies through your browser settings, but disabling them may affect website functionality.</p>
-
-                    <h2>Data Security</h2>
-                    <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.</p>
-
-                    <h2>Your Rights</h2>
-                    <p>You have the right to:</p>
-                    <ul>
-                        <li>Access the personal information we hold about you</li>
-                        <li>Request correction of inaccurate information</li>
-                        <li>Request deletion of your personal information</li>
-                        <li>Unsubscribe from our newsletter at any time</li>
-                    </ul>
-
-                    <h2>Children's Privacy</h2>
-                    <p>Our website is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
-
-                    <h2>Changes to This Policy</h2>
-                    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
-
-                    <h2>Contact Us</h2>
-                    <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-                    <ul>
-                        <li>Email: privacy@aurasphere.com</li>
-                        <li>Address: 123 Lifestyle Avenue, New York, NY 10001</li>
-                    </ul>
-
-                    <p><strong>Effective Date:</strong> January 1, 2025</p>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
-        </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="page-title">Search Results</h1>
+                    <p class="page-subtitle" id="search-subtitle">Find the perfect articles for your lifestyle needs</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-results">
+            <div class="container">
+                <div class="search-info">
+                    <div class="search-query">
+                        <h2>Search Results for: "<span id="search-query"></span>"</h2>
+                        <p id="results-count">0 results found</p>
+                    </div>
+                    <div class="search-filters">
+                        <select id="category-filter" class="filter-select">
+                            <option value="">All Categories</option>
+                            <option value="fashion">Fashion & Accessories</option>
+                            <option value="health">Health & Beauty</option>
+                            <option value="home">Home & Garden</option>
+                            <option value="travel">Travel & Accommodation</option>
+                            <option value="finance">Finance & Insurance</option>
+                            <option value="food">Food & Beverage</option>
+                        </select>
+                        <select id="sort-filter" class="filter-select">
+                            <option value="relevance">Most Relevant</option>
+                            <option value="date">Newest First</option>
+                            <option value="title">Alphabetical</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="search-results-grid" id="search-results">
+                    <!-- Search results will be populated here -->
+                </div>
+
+                <div class="no-results" id="no-results" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No results found</h3>
+                        <p>Try adjusting your search terms or browse our categories</p>
+                        <div class="suggestions">
+                            <h4>Popular searches:</h4>
+                            <div class="suggestion-tags">
+                                <span class="suggestion-tag" onclick="searchSuggestion('sustainable fashion')">sustainable fashion</span>
+                                <span class="suggestion-tag" onclick="searchSuggestion('skincare routine')">skincare routine</span>
+                                <span class="suggestion-tag" onclick="searchSuggestion('minimalist home')">minimalist home</span>
+                                <span class="suggestion-tag" onclick="searchSuggestion('european travel')">european travel</span>
+                                <span class="suggestion-tag" onclick="searchSuggestion('coffee culture')">coffee culture</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <svg width="150" height="32" viewBox="0 0 150 32">
+                    <div class="logo">
+                        <svg class="logo-svg" viewBox="0 0 200 32" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#cccccc;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
                                 </linearGradient>
                             </defs>
                             <circle cx="16" cy="16" r="14" fill="none" stroke="url(#footerLogoGradient)" stroke-width="1" opacity="0.6"/>
@@ -185,7 +162,7 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 class="footer-title">Company</h4>
+                    <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -201,5 +178,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>
