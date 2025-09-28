@@ -174,7 +174,7 @@ function filterArticles(category) {
 
 // Pagination
 let currentPage = 1;
-const articlesPerPage = 6;
+const articlesPerPage = 8;
 
 function setupPagination() {
     const articles = document.querySelectorAll('.article-card');
