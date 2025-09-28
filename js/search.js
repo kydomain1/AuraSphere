@@ -108,6 +108,16 @@ const articles = [
         image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=400&q=80",
         link: "article-6.html",
         tags: ["latam airlines", "south america", "flight deals", "travel", "adventure", "budget travel", "airline deals"]
+    },
+    {
+        id: 7,
+        title: "LATAM: Connecting the Americas with Pride",
+        excerpt: "Discover how LATAM Airlines connects the Americas with pride, offering exceptional service and connectivity across South America, North America, and beyond...",
+        category: "travel",
+        date: "December 15, 2024",
+        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=400&q=80",
+        link: "article-7.html",
+        tags: ["latam airlines", "americas", "aviation", "connectivity", "pride", "service", "airline", "travel"]
     }
 ];
 
